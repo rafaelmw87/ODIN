@@ -1,0 +1,184 @@
+:root{
+    --main-bg-color:blue;
+    --sidebar-bg-color:rgb(14, 31, 41);
+    --header-bg-color:rgb(230, 236, 238);
+    --second-bg-color:green;
+    --main-color:green;
+    --sidebar-color:rgb(227, 227, 231);
+    --header-color:rgb(0, 0, 0);
+    --second-color:yellow;
+}
+body{
+    margin: 0px;
+    padding: 0px;
+    display: grid;
+    grid-template: 
+    "sidebar header" 140px
+    "sidebar main-content" 965px
+    / 20% 80%;
+    font-family: sans-serif;
+}
+
+header{
+    background-color: var(--header-bg-color);
+    color: var(--header-color);
+    padding-left: 10px;
+}
+
+.grid {
+    display: grid;
+
+}
+.searchBar{
+    grid-template-columns: 20px 500px;
+    justify-content: left;
+    align-items: center;
+  }
+
+.search{
+    margin: 10px;
+    height: 20px;
+    border-radius: 15px;
+  }
+
+.logo1{
+    height: 30px;
+    border-radius: 15px;
+}
+
+.user{
+    grid-template-columns: 30px 60px 100px;
+    justify-content: right;
+    align-items: center;
+}
+
+.header{
+    grid-area: header;
+    justify-content: space-between;
+    grid-template-columns: 60% 40%;
+    grid-template-rows: 60px 1.5fr;
+    height: 140px;
+    
+}
+
+.welcome{
+    grid-template-columns: 100px 200px;
+    align-items: center;
+}
+
+.logo2{
+    height: 50px;
+    border-radius: 25px;
+}
+
+.nus{
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: right;
+    padding-right: 50px;
+    align-items: center;
+    gap: 10px;
+    
+}
+.btn1{
+    height: 30px;
+    background-color: var(--sidebar-bg-color);
+    color: var(--sidebar-color);
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+.sidebar{
+    grid-area: sidebar;
+    background-color: var(--sidebar-bg-color);
+    color: var(--sidebar-color);
+    grid-template-rows: 80px 300px 200px;
+    padding-left: 15px;
+}
+
+.main-content{
+    grid-area: main-content;
+    grid-template: 
+    "topic1 topic2" 30px
+    "projects announcements" 50%
+    "projects trending" 50%
+    / 750px 250px;
+    row-gap: 20px;
+    margin-bottom: 20px;
+    }
+
+    .main-content>h2{
+        padding-left:20px
+    }
+
+.projects{
+    grid-template-columns: repeat(2, 350px);
+    gap: 20px;
+    padding: 10px;
+    
+}
+
+.project{
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-left: solid 10px blue;
+    border-radius: 15px;
+    
+
+}
+
+.project:hover{
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    -webkit-transform: scale(1.01);
+    transform: scale(1.01);
+}
+
+.projectbuttons{
+    grid-template-columns: 30px 30px 30px;
+    justify-content: right;
+}
+
+.announcements{
+    margin-top: 10px;
+    grid-area: announcements;
+    gap: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    
+}
+.trending{
+    grid-area: trending;
+    gap: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    height: 400px;
+    margin-bottom: 30px;
+}
+
+.trend{
+    grid-template-columns: 1fr 4fr;
+    align-items: center;
+}
+
+.topic1{
+    grid-area: topic1;
+
+}
+.topic2{
+    grid-area: topic2;
+}
+.topic3{
+    grid-area: topic3;
+}
+
+.pointer:hover{
+    cursor: pointer;
+}
+
+.pointer2:hover{
+    cursor: pointer;
+    text-decoration: underline 2px white;
+    text-underline-offset: 3px;
+}
